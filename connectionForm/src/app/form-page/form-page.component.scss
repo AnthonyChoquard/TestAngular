@@ -1,0 +1,100 @@
+.endLineButton{
+    margin-right: 5px;
+    float: right;
+
+}
+
+.warning{
+    color: red;
+}
+
+.c-dialog {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 2.4rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(black, .75);
+    transition: .2s;
+  }
+  
+  .c-dialog__box {
+    flex: 1;
+    max-width: 48rem;
+    margin: auto;
+    padding: 2.4rem;
+    border-radius: 2em;
+    background-color: lightgray;
+  }
+  
+  .c-dialog[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .page-principale {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .alignement {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .head-title {
+    font-size: xx-large; 
+    font-family: Helvetica;   
+  }
+
+  .input-title {
+    font-size: large; 
+    font-family: Helvetica;   
+  }
+
+  .subtitle{
+      font-size: small;
+      font-family: Helvetica;
+  }
+
+  .input-field {
+      font-size: medium;
+      border-radius: 2em;
+  }
+
+  .contenu {
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    padding: 2% 2% 5% 2%;
+    background-color: rgb(176, 165, 223);
+    border-radius: 3em;
+  }
+
+  .validate{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      border-radius: 2em;
+  }
+
+  .connectionButton{
+      border: 3px solid #3F4AF0;
+      background-color: #727AF6;
+      font-size: large;
+      border-radius: 3em;
+      float: right;
+  }
+
+  .close-button{
+      width: 7%;
+      height: 7%;
+      background-color: transparent;
+      border: none;
+  }

@@ -1,0 +1,83 @@
+<div class="page-principale">
+<div class="alignement">
+<div class="contenu">
+<p class="head-title">Connexion :</p>
+
+<form>
+    <p class="input-title">Adresse e-Mail :</p>
+    <input class="input-field" type="text" id="mail" [(ngModel)]="mail" name="mail"/>
+    <p class="input-title">Mot de passe :</p>
+    <input class="input-field" type="password" id="password" [(ngModel)]="pass" name="pass"/>
+    <br><br>
+    <span class="subtitle">Veuillez valider les </span>
+    <button
+        (click)="open()"
+        type="button" 
+        aria-haspopup="dialog"
+        aria-controls="dialog">Conditions d'utilisation
+    </button>
+    <span class="subtitle"> pour pouvoir vous connecter </span>
+    <br><br>
+    <button (click)="sendForm()" class="connectionButton" type="submit" id="envoyer" value="Connexion" [disabled]="checkFormFilled()">Connexion</button>
+
+
+</form>
+</div>
+</div>
+</div>
+
+
+<div
+  id="dialog"
+  role="dialog"
+  aria-labelledby="dialog-title"
+  aria-describedby="dialog-desc"
+  aria-modal="true"
+  class="c-dialog"
+  *ngIf="showModal">
+  <div role="document" class="c-dialog__box">
+    <p class="head-title">Conditions d'utilisations :    
+        <button
+            class="endLineButton close-button"
+            (click)="close()"
+            aria-label="Fermer"
+            title="Revenir au formulaire"
+            data-dismiss="dialog">
+            <img width="100%" height="10%" src="../../assets/image/close.svg"/>
+        </button>
+    </p>
+    <textarea class="conditions" name="conditions" cols="100%" rows="25%" readonly id="conditions" style=overflow:scroll;resize:none>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus faucibus tempor. Aenean elementum dapibus convallis. Praesent nec urna sit amet felis bibendum convallis. Morbi efficitur interdum sapien, eget dapibus odio consectetur quis. Vivamus a lacinia tellus, vitae aliquet mauris. Sed nisl turpis, eleifend nec nunc a, feugiat viverra ligula. Cras gravida consectetur erat id ornare. Pellentesque eget convallis enim.
+
+        Vivamus vel pharetra felis. Proin efficitur quam ut consequat ornare. Nunc eget ex tortor. Nunc scelerisque nisi ac odio gravida porttitor. Curabitur tempus sollicitudin ligula, id elementum erat. Fusce consequat orci tortor, non semper ipsum sollicitudin eget. Cras sit amet tristique est. Etiam volutpat ipsum sit amet ex fermentum sodales. Nulla porta tristique sem sit amet malesuada. Fusce a lobortis neque, vitae varius ipsum. Curabitur vitae metus mi. Morbi in neque nisi. Maecenas vel ipsum nec enim bibendum sagittis.
+        
+        Cras at lorem id enim dictum molestie. Maecenas at mi efficitur magna fermentum ullamcorper ac eget nibh. Proin dignissim, tortor quis blandit faucibus, metus diam suscipit odio, quis tristique arcu elit nec justo. Nunc in commodo justo. Sed volutpat leo ac fermentum placerat. Curabitur suscipit orci molestie elit vehicula cursus. Mauris feugiat, tellus ut dictum posuere, dolor eros euismod ante, id laoreet tellus elit at elit.
+        
+        Suspendisse sed dictum tellus. Suspendisse potenti. Ut accumsan est et ex convallis viverra vitae a ligula. Nunc molestie ante ligula, non dapibus justo consequat sed. Nam vel felis luctus ante tincidunt elementum sed in eros. Fusce hendrerit nisl a euismod rhoncus. Nunc a condimentum magna, et scelerisque odio. Ut et odio in neque tincidunt feugiat fringilla sed dolor. Nunc sed iaculis metus.
+        
+        Proin rutrum, felis eget convallis elementum, orci eros ullamcorper sem, vel facilisis purus magna vitae nulla. Praesent leo est, iaculis sit amet dui nec, efficitur luctus nisi. Nulla facilisi. Fusce cursus elementum orci, eget vulputate neque interdum at. Phasellus facilisis, quam sit amet porttitor cursus, quam augue molestie felis, eget hendrerit lectus felis quis arcu. Duis eleifend massa leo, id finibus risus euismod a. Vestibulum consectetur fermentum neque, vel scelerisque quam aliquam nec.
+        
+        Sed maximus lectus fermentum odio venenatis pellentesque. Sed viverra justo consequat massa faucibus vehicula. Duis sagittis tincidunt augue et blandit. In aliquam fermentum felis vel molestie. Vivamus ut tincidunt risus, a varius odio. Curabitur tempor quam felis. Pellentesque porttitor placerat facilisis. Nam ac urna id mauris suscipit accumsan non ut elit.
+        
+        Maecenas eu eros nisl. Pellentesque sagittis sit amet quam vel maximus. Duis sodales dapibus purus ac venenatis. Ut tincidunt ex id urna pharetra, id rhoncus erat euismod. Vivamus in augue ac odio pretium congue a ut est. Donec est magna, tristique eu purus eget, vehicula mollis felis. Maecenas in leo augue. Nam maximus metus at egestas condimentum. Cras scelerisque magna dui, in commodo nibh elementum nec. Fusce ac faucibus ex. Maecenas venenatis imperdiet enim non dictum. Etiam nec pharetra orci. Proin placerat scelerisque velit et auctor. Pellentesque fermentum aliquam tellus, in interdum tortor condimentum non.
+        
+        Maecenas ultrices eget diam vitae elementum. Fusce ac turpis vitae quam scelerisque congue. Donec condimentum commodo metus. Aenean varius dolor eget erat gravida vestibulum. Suspendisse nec elementum est. Donec vel tellus rutrum, lobortis lacus id, varius sapien. Nunc condimentum risus in pellentesque viverra. Aenean nec molestie diam. Nulla facilisi. Vivamus nec nunc in ipsum condimentum scelerisque eu vitae nunc. Donec porta auctor nulla. Nulla facilisi. Vivamus fermentum lacus non faucibus pellentesque. Mauris vitae libero convallis, venenatis enim ut, eleifend augue.
+        
+        Morbi porttitor risus nulla, quis suscipit odio pellentesque in. Etiam quam libero, venenatis at ex ac, congue fringilla felis. Curabitur tincidunt, urna ut pellentesque auctor, tellus nisi porta augue, eget semper metus quam non ligula. Morbi nec metus quam. Curabitur ante purus, bibendum a pulvinar elementum, dapibus nec felis. Pellentesque sit amet egestas est. Vestibulum id elit mauris. Morbi congue pharetra urna vel scelerisque. Vivamus libero quam, hendrerit feugiat eros sit amet, posuere ultrices ante. Fusce vel ligula ante.
+        
+        Cras vitae justo efficitur, ultricies metus sed, facilisis mauris. In arcu dolor, porttitor at ornare nec, rutrum at nisi. Etiam mattis, quam sed vehicula pulvinar, eros erat luctus augue, bibendum consequat sapien sapien laoreet tellus. Donec non tristique odio. Quisque dignissim a mauris eu molestie. Donec commodo felis non pellentesque accumsan. Duis cursus mollis massa ac tincidunt. Maecenas maximus rhoncus varius.
+        
+        Phasellus eu odio consequat, aliquet nisi at, volutpat enim. Nulla accumsan felis vel varius laoreet. Integer tempor augue sit amet risus efficitur varius eget eu magna. Etiam quis velit quam. Phasellus at vulputate ex. Maecenas eu arcu vel nibh commodo condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin scelerisque purus nec diam dictum condimentum. Morbi feugiat vitae neque non dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        
+        Ut ut odio tristique, varius tortor eu, scelerisque lorem. Morbi a mauris eu mauris mollis pharetra. Curabitur euismod feugiat congue. Etiam in feugiat nisl. Cras et auctor magna, in iaculis odio. Praesent mauris metus, feugiat nec interdum sed, faucibus sed nunc. Fusce facilisis, leo sed fringilla pretium, nibh neque bibendum dui, sed maximus lorem magna et risus. Etiam non tellus augue. Sed scelerisque, quam et luctus sollicitudin, ipsum metus pharetra ipsum, fringilla pellentesque leo nisl luctus massa. Nulla tincidunt metus quis vehicula suscipit. Sed sit amet ultricies velit, non fermentum lectus. Donec quis luctus ligula. Nam fringilla fringilla arcu non pharetra. Mauris laoreet feugiat est, pharetra venenatis ipsum. Nam at mauris metus. Donec felis erat, porttitor eu dignissim quis, consectetur quis nunc.
+        
+        Fusce ut erat massa. Cras porttitor erat in mollis congue. Curabitur placerat mi at pulvinar lobortis. Phasellus non eleifend mi. In tempor tempus interdum. Nullam mollis tristique tellus, vitae aliquam tellus scelerisque sed. Vivamus tincidunt sem diam, eu semper nunc aliquam sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum pellentesque vitae sem eu lobortis.
+        
+        Nunc tempus congue purus, consectetur fermentum sem tincidunt in. Pellentesque ac fringilla lectus. Etiam egestas nisl et justo efficitur tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam neque est, convallis sed nibh vel, finibus imperdiet ipsum. Cras volutpat auctor urna nec ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vestibulum fermentum rutrum massa, ut venenatis nibh.
+        
+        Suspendisse non nisl ante. Vivamus ac maximus nisi, vitae porttitor ipsum. Donec id est suscipit, malesuada dolor at, cursus erat. Suspendisse rhoncus urna aliquet felis vulputate finibus. Sed porttitor nibh tincidunt orci tempor aliquam. Aenean orci eros, vulputate non velit tincidunt, scelerisque commodo erat. Phasellus egestas ligula eros, non dictum orci lacinia quis. Morbi varius tellus id dolor placerat hendrerit. Etiam auctor mattis metus, at fringilla lacus molestie quis. Integer egestas at arcu a ultricies. Quisque pulvinar neque leo, id elementum nisl porttitor sed. Donec risus nulla, gravida sed posuere vel, sagittis in turpis. Fusce elementum augue eu tortor ultrices pellentesque. Pellentesque ac blandit leo. Suspendisse congue vulputate diam, a consectetur diam euismod elementum. Phasellus nec ligula nisi.</textarea>
+        <br><br><span name="warningTerms" class="warning">Vous devez lire les conditions d'utilisation avant de pouvoir les accepter</span><br>
+        <input class="input-title" type="checkbox" name="mark" value="mark" disabled /><span class="input-title">J'ai lu et j'accepte les conditions d'utilisation</span>
+        <button class="endLineButton validate"id="accept" name="accept" (click)="validateTermsOfUse()" disabled>Continuer</button>
+
+  </div>
+</div>
